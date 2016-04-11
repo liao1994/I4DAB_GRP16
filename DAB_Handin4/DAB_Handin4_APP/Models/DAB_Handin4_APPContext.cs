@@ -20,5 +20,9 @@ namespace DAB_Handin4_APP.Models
         }
 
         public System.Data.Entity.DbSet<DAB_Handin4_APP.Models.Person> People { get; set; }
+
+        public System.Data.Entity.DbSet<DAB_Handin4_APP.Models.Adresse> Adresses { get; set; }
+
+        public System.Data.Entity.DbSet<DAB_Handin4_APP.Models.Phone> Phones { get; set; }
     }
 }
