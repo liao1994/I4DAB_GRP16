@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -21,6 +20,7 @@ namespace DAB_Handin4_APP.Controllers
         public IQueryable<Adresse> GetAdresses()
         {
             return db.Adresses;
+
         }
 
         // GET: api/Adresses/5

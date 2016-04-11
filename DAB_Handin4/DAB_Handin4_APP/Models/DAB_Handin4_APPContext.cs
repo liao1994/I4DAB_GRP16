@@ -17,6 +17,7 @@ namespace DAB_Handin4_APP.Models
     
         public DAB_Handin4_APPContext() : base("name=DAB_Handin4_APPContext")
         {
+            this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
         }
 
         public System.Data.Entity.DbSet<DAB_Handin4_APP.Models.Person> People { get; set; }

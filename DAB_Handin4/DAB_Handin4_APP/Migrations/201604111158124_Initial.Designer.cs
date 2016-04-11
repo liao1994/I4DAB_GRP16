@@ -13,7 +13,7 @@ namespace DAB_Handin4_APP.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201604080949146_Initial"; }
+            get { return "201604111158124_Initial"; }
         }
         
         string IMigrationMetadata.Source

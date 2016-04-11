@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -18,10 +17,20 @@ namespace DAB_Handin4_APP.Controllers
         private DAB_Handin4_APPContext db = new DAB_Handin4_APPContext();
 
         // GET: api/People
-        public IQueryable<Person> GetPeople()
+        public IQueryable<PersonDTO> GetPeople()
         {
-            return db.People;
+            var people = from b in db.People
+                select new PersonDTO()
+                {
+                    PersonID = b.PersonID,
+                    ForNavn = b.ForNavn,
+                    EfterNavn = b.EfterNavn,
+                    AdresseID = b.AdresseID
+                };
+            return people;
         }
+
+
 
         // GET: api/People/5
         [ResponseType(typeof(Person))]
